@@ -19,9 +19,7 @@ setTimeout(() => applyNewPath(scaledPath), 500);
 
 function applyNewPath(path: string) {
   const pathElement = document.querySelector("path");
-  console.log("path", pathElement);
-  console.log("newPath", path);
-  pathElement!.style.d = path;
+  pathElement!.setAttribute("d", path);
 }
 
 function createLinePath(coords: number[]) {
