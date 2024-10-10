@@ -9,8 +9,8 @@ document.querySelector<HTMLDivElement>("#app")!.innerHTML = `
 `;
 
 const originalPath = "M0 50 L50 0 L100 50 L50 100 Z";
-const containerLength = 200;
-const svgViewPortLength = 100;
+const containerLength = 200; // this represents a users viewport size
+const svgViewPortLength = 100; // this is taken from the SVG viewport
 const scallingCoefficient = containerLength / svgViewPortLength;
 const originalCoords = originalPath.match(/\d+/g);
 const newCoords = originalCoords!.map((c) => Number(c) * scallingCoefficient);
